@@ -6,7 +6,7 @@ const router = (req, res) => {
   const url = req.url;
   if (url === "/") {
     console.log("home is home");
-    // handler.home;
+    handler.home(req, res);
   } else if (routes.includes(url)) {
     console.log("./public/index.html");
   } else {
