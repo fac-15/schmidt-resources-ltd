@@ -20,4 +20,29 @@ const home = (request, response) => {
   });
 };
 
-module.exports = { serverError, home };
+const public = (request, response, url) => {
+  const ext = url.split(".")[1];
+  const extType = {
+    html: "text/html",
+    css: "text/css",
+    js: "application/javascript",
+    ico: "image/x-ico",
+    jpg: "image/jpeg",
+    png: "image/png"
+  };
+
+  const filePath = path.join(__dirname, "..", "public", url);
+
+  fs.readFile(filePath, (error, file) => {
+    if (error) {
+      console.log(error);
+      response.writeHead(500, { "Content-Type": "text/html" });
+      response.end("<h1> we've hit and error </h1>");
+    } else {
+      response.writeHead(200, { "Content-Type": `${extType[ext]}` });
+      response.end(file);
+    }
+  });
+};
+
+module.exports = { serverError, home, public };
