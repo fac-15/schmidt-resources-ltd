@@ -1,0 +1,28 @@
+{
+  "name": "schmidt-resources-ltd",
+  "version": "1.0.0",
+  "description": "Week 6 project (Hannah, Sak, Michele, Charmaine)",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape test.js | tap-spec",
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fac-15/schmidt-resources-ltd.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fac-15/schmidt-resources-ltd/issues"
+  },
+  "homepage": "https://github.com/fac-15/schmidt-resources-ltd#readme",
+  "devDependencies": {
+    "nodemon": "^1.18.7",
+    "tap-spec": "^5.0.0",
+    "tape": "^4.9.1"
+  },
+  "dependencies": {}
+}
