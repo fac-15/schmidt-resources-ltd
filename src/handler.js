@@ -1,7 +1,6 @@
 const fs = require("fs");
 const path = require("path");
 // const request = require("request");
-const users = require("./static.js");
 const getData = require("./dynamic.js");
 
 const serverError = (error, response) => {
@@ -46,12 +45,26 @@ const public = (request, response, url) => {
 };
 
 const dynamic = (request, response) => {
-  getData((err, res)=>{
-    if(err)return console.log(err);
+  getData((err, res) => {
+    if (err) return console.log(err);
     let dynamicData = JSON.stringify(res);
-    response.writeHead(200, {'Content-Type':'application/json' });
+    response.writeHead(200, { "Content-Type": "application/json" });
     response.end(dynamicData);
   });
 };
 
-module.exports = { serverError, home, public, dynamic };
+const find = (request, response) => {
+  getData((err, res) => {
+    if (err) {
+      console.log(err);
+      response.writeHead(500, { "Content-Type": "text/html" });
+      response.end("<h1>Sorry!!</h1>");
+    } else {
+      let output = JSON.stringify(res);
+      response.writeHead(200, { "Content-Type": "application/json" });
+      response.end(output);
+    }
+  });
+};
+
+module.exports = { serverError, home, public, dynamic, find };
