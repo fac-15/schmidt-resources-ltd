@@ -3,6 +3,8 @@ const handler = require("./handler.js");
 const routes = ["/style.css", "/main.js", "/index.html"];
 
 const router = (req, res) => {
+  const method = req.method;
+  console.log(method);
   const url = req.url;
   if (url === "/") {
     console.log("home is home");
@@ -13,8 +15,7 @@ const router = (req, res) => {
   } else if (url.includes("dynamic")) {
     console.log(url);
     handler.dynamic(req, res, url);
-  } else if (url.includes("find")) {
-    console.log("THIS IS THE ", req);
+  } else if (method === "POST" && url.includes("/find")) {
     handler.find(req, res, url);
   } else {
     res.writeHead(404, { "Content-Type": "text/html" });

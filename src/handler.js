@@ -61,6 +61,7 @@ const find = (request, response) => {
       response.end("<h1>Sorry!!</h1>");
     } else {
       let output = JSON.stringify(res);
+
       response.writeHead(200, { "Content-Type": "application/json" });
       response.end(output);
     }
