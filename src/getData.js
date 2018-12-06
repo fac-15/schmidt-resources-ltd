@@ -1,9 +1,9 @@
 const dbConnection = require("./database/db_connection");
 
 const getData = cb => {
-  databaseConnection.query("SELECT * FROM resources", (err, res) => {
+  dbConnection.query("SELECT * FROM resources", (err, res) => {
     if (err) {
-      cb(err);
+      return cb(err);
     } else {
       cb(null, res.rows);
     }
