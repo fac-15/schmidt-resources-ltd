@@ -14,6 +14,7 @@ const router = (req, res) => {
     console.log(url);
     handler.dynamic(req, res, url);
   } else if (url.includes("find")) {
+    console.log("THIS IS THE ", req);
     handler.find(req, res, url);
   } else {
     res.writeHead(404, { "Content-Type": "text/html" });

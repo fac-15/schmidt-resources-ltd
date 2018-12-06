@@ -7,6 +7,6 @@ document.getElementById("search_btn").addEventListener("click", function a() {
 
   var queryString = [getType, getSkill, getLevel].map(e => parseInt(e, 10));
 
-  console.log(queryString);
+  console.log("this is a querystring" + queryString);
   getData();
 });
