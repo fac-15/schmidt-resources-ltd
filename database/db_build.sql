@@ -28,10 +28,10 @@ CREATE TABLE type (
 );
 
 INSERT INTO type (name, index) VALUES
-('All', '1'),
-('Book', '2'),
-('Human', '3'),
-('Online', '4');
+('All', 1),
+('Book', 2),
+('Human', 3),
+('Online', 4);
 
 -- skill table
 
@@ -39,15 +39,15 @@ DROP TABLE IF EXISTS skill CASCADE;
 CREATE TABLE skill (
   name VARCHAR(12) NOT NULL,
   index INTEGER NOT NULL,
-  level VARCHAR(12) 
+  level VARCHAR(12)
 );
 
 INSERT INTO skill (name, index, level) VALUES
-('All', '1'),
-('CSS', '2', 'beginner'),
-('JavaScript', '3', 'medium'),
-('HTML', '4', 'beginner'),
-('NodeJS', '5', 'advanced');
+('All', 1, ''),
+('CSS', 2, 'beginner'),
+('JavaScript', 3, 'medium'),
+('HTML', 4, 'beginner'),
+('NodeJS', 5, 'advanced');
 
 -- level table
 
@@ -57,12 +57,10 @@ CREATE TABLE level (
   index INTEGER NOT NULL
 );
 
-INSERT INTO type (name, index) VALUES
-('All', '1'),
-('Easy', '2'),
-('Medium', '3'),
-('Hard', '4');
+INSERT INTO level (name, index) VALUES
+('All', 1),
+('Easy', 2),
+('Medium', 3),
+('Hard', 4);
 
 COMMIT;
-
-
