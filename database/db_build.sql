@@ -10,7 +10,7 @@ CREATE TABLE resources (
   location TEXT NOT NULL
 );
 
-INSERT INTO resources (name, type, skill, level) VALUES
+INSERT INTO resources (name, type, skill, level, location) VALUES
 ('online html', 'online', 'html','easy', 'www.html.com'),
 ('online css', 'online', 'css','hard', 'www.css.com'),
 ('book html', 'book', 'html','medium', 'fac'),

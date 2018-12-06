@@ -10,6 +10,10 @@ const router = (req, res) => {
   } else if (routes.includes(url)) {
     console.log("./public/index.html");
     handler.public(req, res, url);
+  }else if(url.includes('dynamic')){
+    console.log(url)
+    handler.dynamic(req, res, url)
+
   } else {
     res.writeHead(404, { "Content-Type": "text/html" });
     res.end("404, file not found!");

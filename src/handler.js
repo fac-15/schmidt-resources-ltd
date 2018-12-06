@@ -2,7 +2,7 @@ const fs = require("fs");
 const path = require("path");
 // const request = require("request");
 const users = require("./static.js");
-const getData = require("./getData.js");
+const getData = require("./dynamic.js");
 
 const serverError = (error, response) => {
   response.writeHead(500, { "Content-Type": "text/html" });
@@ -45,4 +45,13 @@ const public = (request, response, url) => {
   });
 };
 
-module.exports = { serverError, home, public };
+const dynamic = (request, response) => {
+  getData((err, res)=>{
+    if(err)return console.log(err);
+    let dynamicData = JSON.stringify(res);
+    response.writeHead(200, {'Content-Type':'application/json' });
+    response.end(dynamicData);
+  });
+};
+
+module.exports = { serverError, home, public, dynamic };
