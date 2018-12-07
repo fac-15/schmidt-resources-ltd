@@ -10,6 +10,10 @@ db structure
 
 ## instructions
 
+npm i - to install our npm packages
+npm start - to run our server
+ask us for our config.env :smile:
+
 ## what?
 
 A database for FACers to search for learning resources among FAC.
