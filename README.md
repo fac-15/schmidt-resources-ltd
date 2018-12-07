@@ -29,7 +29,12 @@ Because we have a thirst for knowledge.
 
 ## problems?
 
-Nope. All works flawlessly.
+### Test Problems
+
+![](https://media.giphy.com/media/7MZ0v9KynmiSA/giphy.gif)
+
+  - DB names (upper and lower case).
+  - getData is not a function.
 
 ## things to remember
 
