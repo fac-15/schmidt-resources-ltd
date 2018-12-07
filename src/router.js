@@ -12,6 +12,9 @@ const router = (req, res) => {
   } else if (routes.includes(url)) {
     console.log("./public/index.html");
     handler.public(req, res, url);
+  } else if (url === "/favicon.ico") {
+    res.end();
+
     // }
     // else if (url.includes("dynamic")) {
     //   console.log(url);

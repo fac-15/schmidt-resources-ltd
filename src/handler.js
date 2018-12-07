@@ -1,7 +1,8 @@
 const fs = require("fs");
 const path = require("path");
-// const request = require("request");
+const request = require("request");
 const getData = require("./dynamic.js");
+const querystring = require("querystring");
 
 const serverError = (error, response) => {
   response.writeHead(500, { "Content-Type": "text/html" });
@@ -44,8 +45,19 @@ const public = (request, response, url) => {
   });
 };
 
-const dynamic = (request, response) => {
-  getData((err, res) => {
+const dynamic = (request, response, url) => {
+  const obj = querystring.parse(url);
+  console.log(obj);
+
+  const type = obj["/?type_list"];
+  const skill = obj["skill_list"];
+  const level = obj["level_list"];
+
+  console.log(type);
+  console.log(skill);
+  console.log(level);
+
+  getData(type, skill, level, (err, res) => {
     if (err) return console.log(err);
     let dynamicData = JSON.stringify(res);
     response.writeHead(200, { "Content-Type": "application/json" });
