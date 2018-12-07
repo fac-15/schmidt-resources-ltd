@@ -1,10 +1,40 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
-    <title></title>
+    <meta charset="utf-8" />
+    <title>Schmidt resources ltd</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <h1>Schmidt resources ltd</h1>
+    <form method="get" action="/" id="form">
+      <label class="dropdown"> Type </label>
+      <select name="type_list" id="type_list">
+        <option value="1">All</option>
+        <option value="2">Book</option>
+        <option value="3">Human</option>
+        <option value="4">Online</option>
+      </select>
 
+      <label class="dropdown"> Skill </label>
+      <select name="skill_list" id="skill_list">
+        <option value="1">All</option>
+        <option value="2">CSS</option>
+        <option value="3">JavaScript</option>
+        <option value="4">HTML</option>
+      </select>
+
+      <label class="dropdown"> Level </label>
+      <select name="level_list" id="level_list">
+        <option value="1">All</option>
+        <option value="2">Easy</option>
+        <option value="3">Medium</option>
+        <option value="4">Hard</option>
+      </select>
+
+      <button type="submit" id="search_btn">Search!</button>
+      <button type="reset" id="reset_btn">RESET!</button>
+    </form>
+    <script src="main.js"></script>
   </body>
 </html>
