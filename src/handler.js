@@ -53,19 +53,21 @@ const dynamic = (request, response) => {
   });
 };
 
-const find = (request, response) => {
-  getData((err, res) => {
-    if (err) {
-      console.log(err);
-      response.writeHead(500, { "Content-Type": "text/html" });
-      response.end("<h1>Sorry!!</h1>");
-    } else {
-      let output = JSON.stringify(res);
+// const find = (request, response) => {
+//   getData((err, res) => {
+//     if (err) {
+//       console.log(err);
+//       response.writeHead(500, { "Content-Type": "text/html" });
+//       response.end("<h1>Sorry!!</h1>");
+//     } else {
+//       let output = JSON.stringify(res);
 
-      response.writeHead(200, { "Content-Type": "application/json" });
-      response.end(output);
-    }
-  });
-};
+//       response.writeHead(200, { "Content-Type": "application/json" });
+//       response.end(output);
+//     }
+//   });
+// };
 
-module.exports = { serverError, home, public, dynamic, find };
+// module.exports = { serverError, home, public, dynamic, find };
+
+module.exports = { serverError, home, public, dynamic };
