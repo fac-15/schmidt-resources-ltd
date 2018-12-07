@@ -10,9 +10,9 @@ db structure
 
 ## instructions
 
-npm i - to install our npm packages
-npm start - to run our server
-ask us for our config.env :smile:
+npm i - to install our npm packages /n
+npm start - to run our server /n
+ask us for our config.env :smile: /n
 
 ## what?
 
