@@ -26,14 +26,20 @@ Because we have a thirst for knowledge.
 
 1- We got together and discussed the Database Schema;
 
+## What went well 
+
+- :trophy: Set up 
+  - skeleton was pretty seamless. 
+  
+- :trophy: Database up and running 
 
 ## problems?
 
 ### Getting data from front end to the back end 
   
-  - issues with the search function. 
-  - information is now where we need it :smile:
-  - but is not connected up :cry:
+  - issues with the search function: we want to use index numbers to take the search from the front to the back.
+  - :smile: information is now where we need it 
+  - :cry: but is not connected up 
 
 ### Test Problems
 
@@ -47,6 +53,6 @@ Because we have a thirst for knowledge.
 - heroku
 
 ## stretchgoals
-
+- working
 - Submit function for users to add resources;
 - unhackable (you can't input!);
