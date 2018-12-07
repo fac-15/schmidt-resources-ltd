@@ -29,6 +29,12 @@ Because we have a thirst for knowledge.
 
 ## problems?
 
+### Getting data from front end to the back end 
+  
+  - issues with the search function. 
+  - information is now where we need it :smile:
+  - but is not connected up :cry:
+
 ### Test Problems
 
 ![](https://media.giphy.com/media/7MZ0v9KynmiSA/giphy.gif)
