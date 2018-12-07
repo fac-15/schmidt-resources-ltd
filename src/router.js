@@ -21,6 +21,7 @@ const router = (req, res) => {
     //   handler.dynamic(req, res, url);
   } else if (method === "GET") {
     handler.dynamic(req, res, url);
+    // handler.filter(req, res, url);
   } else {
     res.writeHead(404, { "Content-Type": "text/html" });
     res.end("404, file not found!!!!!!");

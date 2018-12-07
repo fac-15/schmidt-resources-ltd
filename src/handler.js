@@ -1,7 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 const request = require("request");
-const getData = require("./dynamic.js");
+const filterData = require("./dynamic.js");
 const querystring = require("querystring");
 
 const serverError = (error, response) => {
@@ -57,7 +57,7 @@ const dynamic = (request, response, url) => {
   console.log(skill);
   console.log(level);
 
-  getData(type, skill, level, (err, res) => {
+  filterData(type, skill, level, (err, res) => {
     if (err) return console.log(err);
     let dynamicData = JSON.stringify(res);
     response.writeHead(200, { "Content-Type": "application/json" });

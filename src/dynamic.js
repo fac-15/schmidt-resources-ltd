@@ -13,4 +13,19 @@ const getData = (type, skill, level, cb) => {
   });
 };
 
-module.exports = getData;
+const filterData = (type, skill, level, cb) => {
+  console.log(type);
+  console.log(skill);
+  console.log(level);
+
+  dbConnection.query(
+    `SELECT name, location from resources WHERE TYPE = ${type} `,
+    (err, res) => {
+      if (err) return cb(err);
+      console.log("res.rows: " + res.rows);
+      cb(null, res.rows);
+    }
+  );
+};
+
+module.exports = { getData, filterData };
