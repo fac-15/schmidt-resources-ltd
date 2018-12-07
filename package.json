@@ -4,7 +4,7 @@
   "description": "Week 6 project (Hannah, Sak, Michele, Charmaine)",
   "main": "index.js",
   "scripts": {
-    "test": "tape test.js | tap-spec",
+    "test": " NODE_ENV=test node test.js | tap-spec",
     "start": "node src/server.js",
     "dev": "nodemon src/server.js"
   },

@@ -10,4 +10,4 @@ const getData = cb => {
   });
 };
 
-module.exports = getData;
+// module.exports = getData;
