@@ -53,9 +53,9 @@ const dynamic = (request, response, url) => {
   const skill = obj["skill_list"];
   const level = obj["level_list"];
 
-  console.log(type);
-  console.log(skill);
-  console.log(level);
+  // console.log(type);
+  // console.log(skill);
+  // console.log(level);
 
   getData(type, skill, level, (err, res) => {
     if (err) return console.log(err);
